@@ -1,0 +1,861 @@
+/* ===========================
+   SELINA MARCANO PORTFOLIO
+=========================== */
+
+:root{
+
+    --ivory:#FAF8F5;
+    --white:#FFFFFF;
+    --blush:#F4E8E6;
+    --charcoal:#2E2E2E;
+    --light:#777;
+    --border:#ECE8E4;
+
+    --transition:.4s ease;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+    background:var(--ivory);
+    color:var(--charcoal);
+    line-height:1.8;
+
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:28px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(250,248,245,.92);
+
+    backdrop-filter:blur(12px);
+
+    z-index:1000;
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    letter-spacing:1px;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:40px;
+
+}
+
+nav a{
+
+    font-size:.95rem;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#C9A7A2;
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+    padding:150px 8% 100px;
+
+}
+.hero-image img{
+    width:100%;
+    max-width:650px;
+    height:auto;
+    border-radius:30px;
+    object-fit:cover;
+}
+.hero-text h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.5rem;
+
+    line-height:1.1;
+
+    margin:25px 0;
+
+    max-width:700px;
+
+}
+
+.small-heading{
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    color:#9b8884;
+
+    font-size:.8rem;
+
+}
+
+.description{
+
+    max-width:520px;
+
+    color:var(--light);
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+
+.button{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:var(--charcoal);
+
+    color:white;
+
+    transition:var(--transition);
+
+    border-radius:50px;
+
+}
+
+.button:hover{
+
+    background:#555;
+
+    transform:translateY(-3px);
+
+}
+
+.button-outline{
+
+    display:inline-block;
+
+    padding:16px 36px;
+
+    border:1px solid var(--charcoal);
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
+}
+
+.button-outline:hover{
+
+    background:var(--charcoal);
+
+    color:white;
+
+}
+
+/* ===========================
+SECTIONS
+=========================== */
+
+section{
+
+    padding:120px 8%;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+FEATURED GRID
+=========================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    margin-top:60px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.card img{
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+}
+
+.card h3{
+
+    padding:25px 25px 10px;
+
+    font-size:1.4rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.card p{
+
+    padding:0 25px 30px;
+
+    color:var(--light);
+
+}
+.selected-work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.marketing-analytics {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 350px;
+}
+.marketing-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.marketing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.marketing-analytics .work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+/* Selected Work Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Marketing Analytics - second row */
+.marketing-analytics {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    min-height: 80px;
+    overflow: hidden;
+}
+
+/* Marketing Analytics image */
+.marketing-analytics .marketing-image {
+    width: 70%;
+    height: 50%;
+}
+
+.marketing-analytics .marketing-image img {
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Marketing Analytics text */
+.marketing-analytics .work-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.marketing-analytics h3 {
+    margin-bottom: 15px;
+}
+
+.marketing-analytics p {
+    line-height: 1.8;
+}
+
+/* Make the entire card clickable */
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default link styling */
+.card-link h3,
+.card-link p {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Smooth hover effect */
+.card-link .card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Subtle lift when hovering */
+.card-link:hover .card {
+    transform: translateY(-5px);
+}
+
+/* Optional keyboard accessibility */
+.card-link:focus-visible {
+    outline: 2px solid #b98d91;
+    outline-offset: 5px;
+}
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+}
+
+.card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    min-width: 0;
+}
+
+.card-link .card {
+    height: 100%;
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+/* ===========================
+ABOUT
+=========================== */
+
+.about-preview{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.about-image video{
+
+    width:100%;
+
+    height:100%;
+
+    max-height:900px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    display:block;
+
+}
+
+.about-content p{
+
+    color:var(--light);
+
+    margin:30px 0;
+
+}
+
+/* ===========================
+SERVICES
+=========================== */
+
+.service-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.service-grid div{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    transition:.4s;
+
+    border:1px solid var(--border);
+
+}
+
+.service-grid div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.service-grid h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+/* ===========================
+QUOTE
+=========================== */
+
+.quote{
+
+    background:var(--blush);
+
+    text-align:center;
+
+    border-radius:40px;
+
+    margin:80px 8%;
+
+}
+
+.quote h2{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:3.2rem;
+
+}
+
+/* ===========================
+CTA
+=========================== */
+
+.cta{
+
+    text-align:center;
+
+}
+
+.cta p{
+
+    max-width:650px;
+
+    margin:30px auto;
+
+    color:var(--light);
+
+}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Contact Section */
+.contact-section {
+    min-height: 70vh;
+    padding: 120px 8%;
+    background-color: #f8f5f2;
+    display: flex;
+    align-items: center;
+}
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #222;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #222;
+    transition: gap 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-btn span {
+    transition: transform 0.3s ease;
+}
+
+.contact-btn:hover {
+    gap: 18px;
+    opacity: 0.65;
+}
+
+.contact-btn:hover span {
+    transform: translateX(4px);
+}
+.contact-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.contact-section h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0 0 30px;
+    color: #222;
+}
+
+.contact-description {
+    max-width: 550px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+
+/* Contact Information */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    border-top: 1px solid #d5d0cc;
+    padding-top: 35px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+.contact-item a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+    opacity: 0.55;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 90px 7%;
+    }
+
+    .contact-section h2 {
+        font-size: 48px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+/* ===========================
+ANIMATIONS
+=========================== */
+
+.card,
+.about-image,
+.about-content,
+.service-grid div{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    animation:fadeUp 1s forwards;
+
+}
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-text{
+
+order:2;
+
+}
+
+.hero-image{
+
+order:1;
+
+}
+
+.about-preview{
+
+grid-template-columns:1fr;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+@media (max-width: 768px) {
+    .selected-work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marketing-analytics {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .marketing-image {
+        min-height: 300px;
+    }
+}
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marketing-analytics {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .marketing-analytics .marketing-image {
+        height: 300px;
+    }
+
+    .marketing-analytics .work-content {
+        padding: 30px;
+    }
+}
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero-text h1{
+
+font-size:3rem;
+
+}
+
+.quote h2{
+
+font-size:2.3rem;
+
+}
+
+}/* Reveal Animation */
+
+.hidden{
+opacity:0;
+transform:translateY(50px);
+transition:all .9s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
